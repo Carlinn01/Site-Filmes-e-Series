@@ -233,3 +233,47 @@ footer {
 .next-btn:hover {
   color: #ff3a3a;
 }
+
+/*card dos lançamentos*/
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/*imagem no card*/
+.card img {
+  width: 75%;
+  height: 60%;
+  object-fit: cover;
+  padding-top: 5px;
+}
