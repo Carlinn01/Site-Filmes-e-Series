@@ -1,0 +1,164 @@
+/* Deixa a bct da estrutura certa*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-bottom: 2px solid #e50914;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TituloNav {
+  font-size: 32px;
+  color: #e50914;
+  margin-left: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 25px;
+  transition: color 0.3s ease; /*animação do mouse*/
+}
+
+/*Cor qnd passa o mouse*/
+nav a:hover {
+  color: #e50914;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: #e50914;
+  margin-bottom: 20px;
+  border-left: 5px solid #e50914;
+  padding-left: 10px;
+}
+
+/* Filmes e séries em destaque */
+.recomendados {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00000080;
+  transition: transform 0.3s ease;
+}
+
+.filme:hover {
+  transform: scale(1.02);
+}
+
+/* Lançamentos */
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+ul li {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #292929;
+}
+
+/* Scroll interno bonito */
+section:last-of-type {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+section:last-of-type::-webkit-scrollbar {
+  width: 8px;
+}
+
+section:last-of-type::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 30px 0;
+  border-top: 2px solid #e50914;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+.footer-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  color: #e50914;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
