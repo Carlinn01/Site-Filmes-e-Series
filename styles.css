@@ -162,3 +162,74 @@ footer {
   font-size: 0.9rem;
   color: #aaaaaa;
 }
+
+
+
+/*Carrosel*/
+.destaques-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 100px;
+  padding-bottom: 10px;
+  scrollbar-width: none; 
+}
+
+.card {
+  min-width: 200px;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #e50914;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.prev-btn,
+.next-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #e50914;
+  cursor: pointer;
+  padding: 0 10px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: #ff3a3a;
+}
