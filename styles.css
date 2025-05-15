@@ -99,12 +99,13 @@ ul li:hover {
   background-color: #292929;
 }
 
-/* Scroll interno bonito */
+/* Scroll interno bonito- tirei pq tava muito ruim 
 section:last-of-type {
   max-height: 300px;
   overflow-y: auto;
   padding-right: 10px;
 }
+  */
 
 section:last-of-type::-webkit-scrollbar {
   width: 8px;

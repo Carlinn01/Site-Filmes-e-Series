@@ -89,9 +89,33 @@
 
     <section>
         <h2>Ganhadores do Oscar</h2>
-        <ul>
-            <!--o titulo ja fala burro -->
-        </ul>
+        <div class="cards-container">
+    <div class="card">
+      <img src="/img/Premonição6.jpg" alt="Filme 1">
+      <h3>Premonição 6: Laços de Sangue</h3>
+      <p>Estreia em 15 de maio de 2025. </p>
+    </div>
+    <div class="card">
+      <img src="/img/Manas.jpg" alt="Filme 2">
+      <h3>Manas<br><br></h3>
+      <p>Estreia em 15 de maio de 2025.</p>
+    </div>
+    <div class="card">
+      <img src="/img/Final Destination.jpg" alt="Filme 3">
+      <h3>Final Destination: Bloodlines</h3>
+      <p>Estreia em 15 de maio de 2025.</p>
+    </div>
+    <div class="card">
+      <img src="/img/Homem com H.jpg" alt="Filme 4">
+      <h3>Homem com H<br><br></h3>
+      <p>Estreia em 1º de maio de 2025.</p>
+    </div>
+    <div class="card">
+      <img src="/img/Os enforncados.jpg" alt="Filme 5">
+      <h3>Os Enforcados<br><br></h3>
+      <p>Estreia em 8 de maio de 2025.</p>
+    </div>
+  </div>
     </section>
 </main>
 
