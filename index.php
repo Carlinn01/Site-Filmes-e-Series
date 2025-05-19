@@ -16,8 +16,8 @@
   <div class="container">
     <h1 class="TituloNav">FilmesFlix</h1>
     <nav>
-      <a href="filmes.html">Filmes</a>
-      <a href="series.html">Séries</a>
+      <a href="filmes.php">Filmes</a>
+      <a href="series.php">Séries</a>
     </nav>
   </div>
 </header>
@@ -191,8 +191,6 @@
     </div>
   </div>
 </section>
-
-
 </main>
 
 <footer>
