@@ -19,11 +19,20 @@ header {
 }
 
 .container {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.page-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: #e50914; /* vermelho Netflix */
+  pointer-events: none; /* para o título não interferir nos cliques */
 }
 
 .TituloNav {
@@ -166,3 +175,4 @@ footer {
 #back-to-top:hover {
   background-color: #b00712;
 }
+

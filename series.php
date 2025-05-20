@@ -104,6 +104,7 @@ $series = [
     <a href="/index.php" class="TituloNav">
       <h1>FilmesFlix</h1>
     </a>
+    <div class="page-title">Séries</div>  <!-- Título central grande -->
     <nav>
       <a href="/filmes.php">Filmes</a>
       <a href="#drama">Drama</a>
