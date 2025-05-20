@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FilmesFlix</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoNqO4iPY1E/6zC8jb7mY5o5r5LvTr9IYpSFi1eq5B6p5E1" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     
 </head>

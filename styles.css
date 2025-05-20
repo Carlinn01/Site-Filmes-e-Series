@@ -1,15 +1,13 @@
-/* Reset e base */
+/* Base do site */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
   color: #fff;
-  line-height: 1.6;
 }
 
 header {
@@ -19,16 +17,25 @@ header {
 }
 
 .container {
+  font-family: Bebas Neue;
   width: 90%;
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
+
 
 .TituloNav {
   font-size: 32px;
+  color: #e50914;
+  margin-left: 10px;
+}
+
+.TituloNavseries {
+  font-size: 22px;
   color: #e50914;
   margin-left: 10px;
 }
@@ -56,11 +63,17 @@ section {
 }
 
 section h2 {
-  font-size: 1.8rem;
+  font-family: Bebas Neue;
+  font-size: 32px;
   color: #e50914;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border-left: 5px solid #e50914;
-  padding-left: 10px;
+  padding-left: 8px;
+}
+
+section h3 {
+  font-family: Roboto;
+  font-size: 20px;
 }
 
 /* Destaques - carrossel */
@@ -69,7 +82,6 @@ section h2 {
   margin: 40px auto;
   padding: 0 20px;
 }
-
 .carousel-container {
   position: relative;
   display: flex;
@@ -83,7 +95,7 @@ section h2 {
   scroll-behavior: smooth;
   gap: 20px;
   padding-bottom: 10px;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .carousel::-webkit-scrollbar {
@@ -181,7 +193,7 @@ section h2 {
   transform: scale(1.05);
 }
 
-/* Responsividade */
+/* Responsividade para outros dispositivos*/
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
