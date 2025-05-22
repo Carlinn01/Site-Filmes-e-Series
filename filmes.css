@@ -26,12 +26,14 @@ header {
 
 
 .container {
+  font-family: Bebas Neue;
   width: 90%;
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .TituloNav {
@@ -151,10 +153,11 @@ section h2 {
 /* Cards dos lançamentos e oscar */
 .cards-container {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 0;
+  align-items: flex-start; /* ou center, dependendo do efeito desejado */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-lancamento {

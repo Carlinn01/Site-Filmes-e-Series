@@ -19,10 +19,14 @@ header {
 }
 
 .container {
+  font-family: Bebas Neue;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
+
 }
 
 .page-title {
@@ -40,10 +44,6 @@ header {
   text-decoration: none;
 }
 
-.TituloNav h1 {
-  font-size: 32px;
-  font-family: Arial, sans-serif;
-}
 
 nav a {
   margin-left: 20px;
@@ -157,20 +157,21 @@ footer {
 /* Botão voltar ao topo */
 #back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #e50914;
+  bottom: 20px; 
+  right: 20px;  
+  background-color: #f1333d;
   color: white;
-  padding: 12px 14px;
+  padding: 6px 10px; 
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 28px;  
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
   transition: background-color 0.3s ease;
   z-index: 1000;
   text-align: center;
   line-height: 1;
 }
+
 
 #back-to-top:hover {
   background-color: #b00712;
