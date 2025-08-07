@@ -1,3 +1,138 @@
+<?php
+// Destaques - Filmes
+$destaques_filmes = [
+    [
+        "titulo" => "Inside Out 2",
+        "imagem" => "https://upload.wikimedia.org/wikipedia/pt/b/b3/Inside_Out_2.png"
+    ],
+    [
+        "titulo" => "Deadpool & Wolverine",
+        "imagem" => "https://m.media-amazon.com/images/S/pv-target-images/dd6fb66997dd4cb5606b587bb255d2cd2cec20ecbd11852a8f6b07a1358d09a1.jpg"
+    ],
+    [
+        "titulo" => "Moana 2",
+        "imagem" => "https://upload.wikimedia.org/wikipedia/pt/7/73/Moana_2_poster.jpg"
+    ],
+    [
+        "titulo" => "Meu Malvado Favorito 4",
+        "imagem" => "https://ingresso-a.akamaihd.net/prd/img/movie/meu-malvado-favorito-4/4d756249-3b88-4b59-baa2-527f5e3d4c3e.webp"
+    ],
+    [
+        "titulo" => "Wicked",
+        "imagem" => "https://www.universalpics.com.br/tl_files/content/movies/wicked/posters/01.jpg"
+    ],
+    [
+        "titulo" => "Duna: Parte 2",
+        "imagem" => "https://m.media-amazon.com/images/M/MV5BNzk5MTE4YTUtNGU2My00MTYxLWE5NGItODk4YWFkOWYyMjA5XkEyXkFqcGc@._V1_.jpg"
+    ],
+    [
+        "titulo" => "Mufasa: O Rei Leão",
+        "imagem" => "https://lumiere-a.akamaihd.net/v1/images/7e31d6246c6f32fbb227b4739fb5440f_da23af1f.jpeg"
+    ],
+    [
+        "titulo" => "Godzilla e Kong: O Novo Império",
+        "imagem" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Bmm1_i_4vAcv-IYHVdhpV6T7s6OU-NVXpA&s"
+    ],
+    [
+        "titulo" => "Kung Fu Panda 4",
+        "imagem" => "https://upload.wikimedia.org/wikipedia/pt/7/7f/Kung_Fu_Panda_4_poster.jpg"
+    ],
+    [
+        "titulo" => "Sonic 3",
+        "imagem" => "https://m.media-amazon.com/images/S/pv-target-images/d3d170cab1ef757a9a437cb9aa70bb33a8897f31f327f02c2de4d5a50dd32ff4.jpg"
+    ]
+];
+
+// Destaques - Séries
+$destaques_series = [
+    [
+        "titulo" => "The Last Of Us",
+        "imagem" => "https://br.web.img3.acsta.net/c_310_420/pictures/22/11/30/19/53/5856320.jpg"
+    ],
+    [
+        "titulo" => "Game of Thrones",
+        "imagem" => "https://br.web.img2.acsta.net/c_310_420/pictures/19/03/21/16/15/4239577.jpg"
+    ],
+    [
+        "titulo" => "A Descoberta das Bruxas",
+        "imagem" => "https://br.web.img3.acsta.net/c_310_420/pictures/18/09/10/15/10/1186940.jpg"
+    ],
+    [
+        "titulo" => "Breaking Bad",
+        "imagem" => "https://br.web.img3.acsta.net/c_310_420/pictures/14/03/31/19/28/462555.jpg"
+    ],
+    [
+        "titulo" => "Supernatural",
+        "imagem" => "https://br.web.img2.acsta.net/c_310_420/pictures/18/11/12/13/38/3629995.jpg"
+    ],
+    [
+        "titulo" => "Anne with an E",
+        "imagem" => "https://br.web.img3.acsta.net/c_310_420/pictures/19/11/26/09/09/5380589.jpg"
+    ],
+    [
+        "titulo" => "Peaky Blinders",
+        "imagem" => "https://br.web.img3.acsta.net/c_310_420/pictures/15/03/11/17/20/597260.jpg"
+    ],
+    [
+        "titulo" => "Prison Break",
+        "imagem" => "https://br.web.img3.acsta.net/c_310_420/pictures/17/03/16/16/04/274512.jpg"
+    ]
+];
+
+// Lançamentos
+$lancamentos = [
+    [
+        "titulo" => "Premonição 6: Laços de Sangue",
+        "imagem" => "/img/Premonição6.jpg",
+        "descricao" => "Estreia em 15 de maio de 2025."
+    ],
+    [
+        "titulo" => "Manas",
+        "imagem" => "/img/Manas.jpg",
+        "descricao" => "Estreia em 15 de maio de 2025."
+    ],
+    [
+        "titulo" => "Final Destination: Bloodlines",
+        "imagem" => "/img/Final Destination.jpg",
+        "descricao" => "Estreia em 15 de maio de 2025."
+    ],
+    [
+        "titulo" => "Homem com H",
+        "imagem" => "/img/Homem com H.jpg",
+        "descricao" => "Estreia em 1º de maio de 2025."
+    ],
+    [
+        "titulo" => "Os Enforcados",
+        "imagem" => "/img/Os enforncados.jpg",
+        "descricao" => "Estreia em 8 de maio de 2025."
+    ]
+];
+
+// Vencedores do Oscar
+$oscar_vencedores = [
+    [
+        "titulo" => "Tudo em Todo Lugar ao Mesmo Tempo (2023)",
+        "imagem" => "https://br.web.img2.acsta.net/pictures/22/05/16/17/59/5165498.jpg",
+        "descricao" => "Vencedor do Oscar de Melhor Filme em 2023.",
+        "data_cerimonia" => "Data da cerimônia: 12 de março de 2023",
+        "sinopse" => "Um filme emocionante que mistura drama, comédia e fantasia, explorando múltiplas realidades."
+    ],
+    [
+        "titulo" => "Oppenheimer (2024)",
+        "imagem" => "https://upload.wikimedia.org/wikipedia/pt/5/5b/Oppenheimer_poster.jpg",
+        "descricao" => "Vencedor do Oscar de Melhor Filme em 2024.",
+        "data_cerimonia" => "Data da cerimônia: 10 de março de 2024",
+        "sinopse" => "Biografia dramática sobre o físico que liderou o Projeto Manhattan."
+    ],
+    [
+        "titulo" => "Oscar 2025",
+        "imagem" => "https://i.pinimg.com/736x/fd/0a/78/fd0a7888a1165a085fabf22a1ac3fd41.jpg",
+        "descricao" => "A cerimônia ainda não ocorreu.",
+        "sinopse" => "Os vencedores serão atualizados após o evento."
+    ]
+];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +140,6 @@
     <title>FilmesFlix</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    
 </head>
 <body>
 
@@ -21,173 +155,65 @@
 
 <main>
   <section class="destaques-section">
-  <h2>Destaques</h2>
-  <h3>Filmes:</h3>
-  <div class="carousel-container">
-    <button class="prev-btn">&#10094;</button>
-    <div class="carousel">
-
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/b/b3/Inside_Out_2.png" alt="Inside Out 2" />
-        <h3>Inside Out 2</h3>
+    <h2>Destaques</h2>
+    <h3>Filmes:</h3>
+    <div class="carousel-container">
+      <button class="prev-btn">&#10094;</button>
+      <div class="carousel">
+        <?php for ($i = 0; $i < count($destaques_filmes); $i++) { ?>
+          <div class="card">
+            <img src="<?= $destaques_filmes[$i]['imagem'] ?>" alt="<?= $destaques_filmes[$i]['titulo'] ?>" />
+            <h3><?= $destaques_filmes[$i]['titulo'] ?></h3>
+          </div>
+        <?php } ?>
       </div>
-
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/S/pv-target-images/dd6fb66997dd4cb5606b587bb255d2cd2cec20ecbd11852a8f6b07a1358d09a1.jpg" alt="Deadpool & Wolverine" />
-        <h3>Deadpool & Wolverine</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/7/73/Moana_2_poster.jpg" alt="Moana 2" />
-        <h3>Moana 2</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://ingresso-a.akamaihd.net/prd/img/movie/meu-malvado-favorito-4/4d756249-3b88-4b59-baa2-527f5e3d4c3e.webp" alt="Despicable Me 4" />
-        <h3>Meu Malvado Favorito 4</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://www.universalpics.com.br/tl_files/content/movies/wicked/posters/01.jpg" alt="Wicked" />
-        <h3>Wicked</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/M/MV5BNzk5MTE4YTUtNGU2My00MTYxLWE5NGItODk4YWFkOWYyMjA5XkEyXkFqcGc@._V1_.jpg" alt="Dune: Part Two" />
-        <h3>Duna: Parte 2</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://lumiere-a.akamaihd.net/v1/images/7e31d6246c6f32fbb227b4739fb5440f_da23af1f.jpeg" alt="Mufasa: The Lion King" />
-        <h3>Mufasa: O Rei Leão</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Bmm1_i_4vAcv-IYHVdhpV6T7s6OU-NVXpA&s" alt="Godzilla x Kong: The New Empire" />
-        <h3>Godzilla e Kong: O Novo Império</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/7/7f/Kung_Fu_Panda_4_poster.jpg" alt="Kung Fu Panda 4" />
-        <h3>Kung Fu Panda 4</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/S/pv-target-images/d3d170cab1ef757a9a437cb9aa70bb33a8897f31f327f02c2de4d5a50dd32ff4.jpg" alt="Sonic the Hedgehog 3" />
-        <h3>Sonic 3</h3>
-      </div>
-
+      <button class="next-btn">&#10095;</button>
     </div>
-    <button class="next-btn">&#10095;</button>
-  </div>
-  <!-- séries -->
-  <h3>Séries:</h3>
-  <div class="carousel-container">
-    <button class="prev-btn">&#10094;</button>
-    <div class="carousel">
 
-      <div class="card">
-        <img src="https://br.web.img3.acsta.net/c_310_420/pictures/22/11/30/19/53/5856320.jpg" alt="The Last Of Us" />
-        <h3>The Last Of Us</h3>
+    <h3>Séries:</h3>
+    <div class="carousel-container">
+      <button class="prev-btn">&#10094;</button>
+      <div class="carousel">
+        <?php for ($i = 0; $i < count($destaques_series); $i++) { ?>
+          <div class="card">
+            <img src="<?= $destaques_series[$i]['imagem'] ?>" alt="<?= $destaques_series[$i]['titulo'] ?>" />
+            <h3><?= $destaques_series[$i]['titulo'] ?></h3>
+          </div>
+        <?php } ?>
       </div>
-
-      <div class="card">
-        <img src="https://br.web.img2.acsta.net/c_310_420/pictures/19/03/21/16/15/4239577.jpg" alt="Game of Thrones" />
-        <h3>Game of Thrones</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://br.web.img3.acsta.net/c_310_420/pictures/18/09/10/15/10/1186940.jpg" alt="A Descoberta das Bruxas" />
-        <h3>A Descoberta das Bruxas</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://br.web.img3.acsta.net/c_310_420/pictures/14/03/31/19/28/462555.jpg" alt="Breaking Bad" />
-        <h3>Breaking Bad</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://br.web.img2.acsta.net/c_310_420/pictures/18/11/12/13/38/3629995.jpg" alt="Supernatural" />
-        <h3>Supernatural</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://br.web.img3.acsta.net/c_310_420/pictures/19/11/26/09/09/5380589.jpg" alt="Anne with an E" />
-        <h3>Anne with an E</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://br.web.img3.acsta.net/c_310_420/pictures/15/03/11/17/20/597260.jpg" alt="Peaky Blinders" />
-        <h3>Peaky Blinders</h3>
-      </div>
-
-      <div class="card">
-        <img src="https://br.web.img3.acsta.net/c_310_420/pictures/17/03/16/16/04/274512.jpg" alt="Prison Break" />
-        <h3>Prison Break</h3>
-      </div>
+      <button class="next-btn">&#10095;</button>
     </div>
-    <button class="next-btn">&#10095;</button>
-  </div>
-</section>
+  </section>
 
-    <section>
-      <h2>Lançamentos</h2>
-      <div class="cards-container">
-        <div class="card-lancamento">
-          <img src="/img/Premonição6.jpg" alt="Filme 1">
-          <h3>Premonição 6: Laços de Sangue</h3>
-          <p>Estreia em 15 de maio de 2025. </p>
-        </div>
-        <div class="card-lancamento">
-          <img src="/img/Manas.jpg" alt="Filme 2">
-          <h3>Manas<br><br></h3>
-          <p>Estreia em 15 de maio de 2025.</p>
-        </div>
-        <div class="card-lancamento">
-          <img src="/img/Final Destination.jpg" alt="Filme 3">
-          <h3>Final Destination: Bloodlines</h3>
-          <p>Estreia em 15 de maio de 2025.</p>
-        </div>
-        <div class="card-lancamento">
-          <img src="/img/Homem com H.jpg" alt="Filme 4">
-          <h3>Homem com H<br><br></h3>
-          <p>Estreia em 1º de maio de 2025.</p>
-        </div>
-        <div class="card-lancamento">
-          <img src="/img/Os enforncados.jpg" alt="Filme 5">
-          <h3>Os Enforcados<br><br></h3>
-          <p>Estreia em 8 de maio de 2025.</p>
-        </div>
-      </div>
-    </section>  
   <section>
-  <h2>Filmes Vencedores do Oscar de Melhor Filme</h2>
-
-  <div class="cards-container">
-    <div class="card-lancamento">
-      <img src="https://br.web.img2.acsta.net/pictures/22/05/16/17/59/5165498.jpg" alt="Tudo em Todo Lugar ao Mesmo Tempo" />
-      <h3>Tudo em Todo Lugar ao Mesmo Tempo (2023)</h3>
-      <p>Vencedor do Oscar de Melhor Filme em 2023.</p>
-      <p>Data da cerimônia: 12 de março de 2023</p>
-      <p>Um filme emocionante que mistura drama, comédia e fantasia, explorando múltiplas realidades.</p>
+    <h2>Lançamentos</h2>
+    <div class="cards-container">
+      <?php for ($i = 0; $i < count($lancamentos); $i++) { ?>
+        <div class="card-lancamento">
+          <img src="<?= $lancamentos[$i]['imagem'] ?>" alt="<?= $lancamentos[$i]['titulo'] ?>">
+          <h3><?= $lancamentos[$i]['titulo'] ?></h3>
+          <p><?= $lancamentos[$i]['descricao'] ?></p>
+        </div>
+      <?php } ?>
     </div>
+  </section>
 
-    <div class="card-lancamento">
-      <img src="https://upload.wikimedia.org/wikipedia/pt/5/5b/Oppenheimer_poster.jpg" alt="Oppenheimer" />
-      <h3>Oppenheimer (2024)</h3>
-      <p>Vencedor do Oscar de Melhor Filme em 2024.</p>
-      <p>Data da cerimônia: 10 de março de 2024</p>
-      <p>Biografia dramática sobre o físico que liderou o Projeto Manhattan.</p>
+  <section>
+    <h2>Filmes Vencedores do Oscar de Melhor Filme</h2>
+    <div class="cards-container">
+      <?php for ($i = 0; $i < count($oscar_vencedores); $i++) { ?>
+        <div class="card-lancamento">
+          <img src="<?= $oscar_vencedores[$i]['imagem'] ?>" alt="<?= $oscar_vencedores[$i]['titulo'] ?>" />
+          <h3><?= $oscar_vencedores[$i]['titulo'] ?></h3>
+          <p><?= $oscar_vencedores[$i]['descricao'] ?></p>
+          <?php if (isset($oscar_vencedores[$i]['data_cerimonia'])) { ?>
+            <p><?= $oscar_vencedores[$i]['data_cerimonia'] ?></p>
+          <?php } ?>
+          <p><?= $oscar_vencedores[$i]['sinopse'] ?></p>
+        </div>
+      <?php } ?>
     </div>
-
-    <div class="card-lancamento">
-      <img src="https://i.pinimg.com/736x/fd/0a/78/fd0a7888a1165a085fabf22a1ac3fd41.jpg" alt="imagem com ?" />
-      <h3>Oscar 2025</h3>
-      <p>A cerimônia ainda não ocorreu.</p>
-      <p>Os vencedores serão atualizados após o evento.</p>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer>
@@ -195,7 +221,6 @@
     <div class="footer-logo"> 
       <h2>FilmesFlix</h2>
     </div>
-        
     <p class="footer-copy">© 2025 FilmesFlix. Todos os direitos reservados.</p>
   </div>
 </footer>
@@ -205,8 +230,7 @@
     const carousel = container.querySelector('.carousel');
     const prevBtn = container.querySelector('.prev-btn');
     const nextBtn = container.querySelector('.next-btn');
-
-    const cardWidth = carousel.querySelector('.card').offsetWidth + 15; // largura do card + gap
+    const cardWidth = carousel.querySelector('.card').offsetWidth + 15;
 
     prevBtn.addEventListener('click', () => {
       if (carousel.scrollLeft === 0) {
