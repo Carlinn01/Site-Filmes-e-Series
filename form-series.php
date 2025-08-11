@@ -7,7 +7,7 @@
     <title>Cadastro de Séries - FilmesFlix</title>
 </head>
 <body class="container w-50 m-5 mx-auto">
-    <form action="cadastro-series.php" method="POST" enctype="multipart/form-data">
+    <form action="form-series.php" method="POST" enctype="multipart/form-data">
         <h3 class="text-center mb-5">Cadastro de Séries</h3>
         
         <div class="mb-3">
@@ -47,8 +47,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="classificacao" class="form-label">Classificação Indicativa</label>
-            <select class="form-select" name="classificacao" id="classificacao" required>
+            <label for="categoria" class="form-label">Classificação Indicativa</label>
+            <select class="form-select" name="categoria" id="categoria" required>
                 <option value="">Selecione a classificação</option>
                 <option value="Livre">Livre</option>
                 <option value="10+">10+</option>
@@ -69,10 +69,6 @@
             <input type="number" class="form-control" name="ano_lancamento" id="ano_lancamento" min="1900" max="2030" placeholder="Ex: 2008">
         </div>
 
-        <div class="mb-3">
-            <label for="sinopse" class="form-label">Sinopse</label>
-            <textarea class="form-control" name="sinopse" id="sinopse" rows="4" placeholder="Descreva brevemente a série..."></textarea>
-        </div>
 
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" name="destaque" id="destaque" value="1">
