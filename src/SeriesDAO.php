@@ -7,36 +7,43 @@ class SeriesDAO
     public static function inserir($dados)
     {
         $conexao = ConexaoBD::conectar();
+
         $titulo = $dados['titulo'];
-        $imagem = Util::salvarArquivo();
-        $atores = $dados['atores'];
         $diretor = $dados['diretor'];
-        $categoria = $dados['categoria'];
-        $sinopse = $dados['sinopse'];
-        $genero_id = $dados['genero_id'];
+        $ano = $dados['ano'];
+        $elenco = $dados['elenco'];
+        $imagem = Util::salvarArquivo();
+        $temporadas = $dados['temporadas'];
+        $episodios = $dados['episodios'];
+        $idcategoria = $dados['idcategoria'];
+        $idclassificacao = $dados['idclassificacao'];
+
         
-        $sql = "INSERT INTO series (titulo, imagem, atores, diretor, categoria, sinopse, genero_id) 
-                VALUES (:titulo, :imagem, :atores, :diretor, :categoria, :sinopse, :genero_id)";
+        $sql = "INSERT INTO serie
+                (titulo, diretor, ano, elenco, imagem, temporadas, episodios, idcategoria, idclassificacao) 
+                VALUES 
+                (:titulo, :diretor, :ano, :elenco, :imagem, :temporadas, :episodios, :idcategoria, :idclassificacao)";
         $stmt = $conexao->prepare($sql);
         $stmt->bindParam(':titulo', $titulo);
-        $stmt->bindParam(':imagem', $imagem);
-        $stmt->bindParam(':atores', $atores);
         $stmt->bindParam(':diretor', $diretor);
-        $stmt->bindParam(':caregoria', $categoria);
-        $stmt->bindParam(':sinopse', $sinopse);
-        $stmt->bindParam(':categoria', $categoria);
+        $stmt->bindParam(':ano', $ano);
+        $stmt->bindParam(':elenco', $elenco);
+        $stmt->bindParam(':imagem', $imagem);
+        $stmt->bindParam(':temporadas', $temporadas);
+        $stmt->bindParam(':episodios', $episodios);
+        $stmt->bindParam(':idcategoria', $idcategoria);
+        $stmt->bindParam(':idclassificacao', $idclassificacao);
         $stmt->execute();
     }
-    
+
     public static function listar()
     {
         $conexao = ConexaoBD::conectar();
-        $sql = "SELECT s.*, g.nome as genero_nome FROM series s 
-                LEFT JOIN generos g ON s.genero_id = g.id 
-                ORDER BY s.titulo";
+        $sql = "SELECT * FROM serie";
         $stmt = $conexao->prepare($sql);
         $stmt->execute();
-        $series = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $series;
+        $serie = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $serie;
     }
+    
 }

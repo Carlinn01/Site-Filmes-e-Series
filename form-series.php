@@ -26,8 +26,12 @@
             <input type="text" class="form-control" name="elenco" placeholder="Digite o Elenco da Série">
         </div>
         <div class="mb-3">
-            <label for="nome" class="form-label">Prêmios</label>
-            <input type="text" class="form-control" name="premios" placeholder="Digite os Prêmios da Série">
+            <label for="nome" class="form-label">Temporadas</label>
+            <input type="text" class="form-control" name="temporadas" placeholder="Digite as Temporadas da Série">
+        </div>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Episodios</label>
+            <input type="text" class="form-control" name="episodios" placeholder="Digite os Episódios da Série">
         </div>
          <div class="mb-3 col-6">
             <label for="idcategoria" class="form-label">Categoria</label>
@@ -51,7 +55,7 @@
                 $classificacao = ClassificacaoDAO::listarClassificacao();
                 for ($i=0; $i < count($classificacao) ; $i++) { 
                 ?>
-                <option value=<?=$classificacao[$i]["idclassificacao"]?>><?=$classificacao[$i]["idade"]?></option>
+                <option value=<?=$classificacao[$i]["idclassificacao"]?>><?=$classificacao[$i]["nome"]?></option>
                 <?php
                 }
                 ?>

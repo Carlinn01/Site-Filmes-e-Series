@@ -17,7 +17,7 @@ class FilmesDAO
         $idcategoria = $dados['idcategoria'];
         $idclassificacao = $dados['idclassificacao'];
 
-        $sql = "INSERT INTO filme 
+        $sql = "INSERT INTO filmes
                 (titulo, diretor, ano, elenco, premios, imagem, idcategoria, idclassificacao) 
                 VALUES 
                 (:titulo, :diretor, :ano, :elenco, :premios, :imagem, :idcategoria, :idclassificacao)";
@@ -31,14 +31,13 @@ class FilmesDAO
         $stmt->bindParam(':imagem', $imagem);
         $stmt->bindParam(':idcategoria', $idcategoria);
         $stmt->bindParam(':idclassificacao', $idclassificacao);
-
         $stmt->execute();
     }
 
     public static function listar()
     {
         $conexao = ConexaoBD::conectar();
-        $sql = "SELECT * FROM filme";
+        $sql = "SELECT * FROM filmes";
         $stmt = $conexao->prepare($sql);
         $stmt->execute();
         $filmes = $stmt->fetchAll(PDO::FETCH_ASSOC);
