@@ -1,87 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>Cadastro de Séries - FilmesFlix</title>
+    <title>Cadastrar Séries</title>
 </head>
-<body class="container w-50 m-5 mx-auto">
-    <form action="form-series.php" method="POST" enctype="multipart/form-data">
-        <h3 class="text-center mb-5">Cadastro de Séries</h3>
-        
-        <div class="mb-3">
-            <label for="titulo" class="form-label">Título da Série</label>
-            <input type="text" class="form-control" name="titulo" id="titulo" required>
+<body class="container">
+    <h2 class="text-center">Cadastro de Séries</h2>
+    <form action="cadastro-series.php" class="row" method="POST" enctype="multipart/form-data">
+        <div class="mb-3 col-6">
+            <label for="nome" class="form-label">Titúlo</label>
+            <input type="text" class="form-control" name="titulo" placeholder="Digite o Titúlo da Série">
         </div>
-
-        <div class="mb-3">
-            <label for="imagem" class="form-label">Poster da Série</label>
-            <input type="file" class="form-control" name="imagem" id="imagem" accept="image/*" required>
+        <div class="mb-3 col-6">
+            <label class="form-label">Diretor</label>
+            <input type="text" name="diretor" class="form-control" placeholder="Digite o nome do Diretor">
         </div>
-
-        <div class="mb-3">
-            <label for="atores" class="form-label">Atores Principais</label>
-            <textarea class="form-control" name="atores" id="atores" rows="2" placeholder="Ex: Bryan Cranston, Aaron Paul, Anna Gunn"></textarea>
+        <div class="mb-3 ">
+            <label for="nome" class="form-label">Ano</label>
+            <input type="text" class="form-control" name="ano" placeholder="Digite o Ano de Lançamento">
         </div>
-
         <div class="mb-3">
-            <label for="diretor" class="form-label">Diretor/Criador</label>
-            <input type="text" class="form-control" name="diretor" id="diretor" placeholder="Ex: Vince Gilligan">
+            <label for="nome" class="form-label">Elenco</label>
+            <input type="text" class="form-control" name="elenco" placeholder="Digite o Elenco da Série">
         </div>
-
         <div class="mb-3">
-            <label for="genero" class="form-label">Gênero</label>
-            <select class="form-select" name="genero" id="genero" required>
-                <option value="">Selecione um gênero</option>
-                <option value="drama">Drama</option>
-                <option value="acao">Ação</option>
-                <option value="comedia">Comédia</option>
-                <option value="terror">Terror</option>
-                <option value="suspense">Suspense</option>
-                <option value="fantasia">Fantasia</option>
-                <option value="ficcao-cientifica">Ficção Científica</option>
-                <option value="romance">Romance</option>
-                <option value="documentario">Documentário</option>
+            <label for="nome" class="form-label">Prêmios</label>
+            <input type="text" class="form-control" name="premios" placeholder="Digite os Prêmios da Série">
+        </div>
+         <div class="mb-3 col-6">
+            <label for="idcategoria" class="form-label">Categoria</label>
+            <select name="idcategoria" class="form-select">
+                <?php
+                require_once "src/CategoriaDAO.php";
+                $categoria = CategoriaDAO::listarCategoria();
+                for ($i=0; $i < count($categoria) ; $i++) { 
+                ?>
+                <option value=<?=$categoria[$i]["idcategoria"]?>><?=$categoria[$i]["nome"]?></option>
+                <?php
+                }
+                ?>
             </select>
         </div>
-
-        <div class="mb-3">
-            <label for="categoria" class="form-label">Classificação Indicativa</label>
-            <select class="form-select" name="categoria" id="categoria" required>
-                <option value="">Selecione a classificação</option>
-                <option value="Livre">Livre</option>
-                <option value="10+">10+</option>
-                <option value="12+">12+</option>
-                <option value="14+">14+</option>
-                <option value="16+">16+</option>
-                <option value="18+">18+</option>
+        <div class="mb-3 col-6">
+            <label for="idclassificacao" class="form-label">Classificação</label>
+            <select name="idclassificacao" class="form-select">
+                <?php
+                require_once "src/ClassificacaoDAO.php";
+                $classificacao = ClassificacaoDAO::listarClassificacao();
+                for ($i=0; $i < count($classificacao) ; $i++) { 
+                ?>
+                <option value=<?=$classificacao[$i]["idclassificacao"]?>><?=$classificacao[$i]["idade"]?></option>
+                <?php
+                }
+                ?>
             </select>
         </div>
-
         <div class="mb-3">
-            <label for="temporadas" class="form-label">Número de Temporadas</label>
-            <input type="number" class="form-control" name="temporadas" id="temporadas" min="1" placeholder="Ex: 5">
+            <label class="form-label">Foto</label>
+            <input type="file" name="imagem" class="form-control">
         </div>
-
-        <div class="mb-3">
-            <label for="ano_lancamento" class="form-label">Ano de Lançamento</label>
-            <input type="number" class="form-control" name="ano_lancamento" id="ano_lancamento" min="1900" max="2030" placeholder="Ex: 2008">
-        </div>
-
-
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" name="destaque" id="destaque" value="1">
-            <label class="form-check-label" for="destaque">
-                Marcar como destaque na página principal
-            </label>
-        </div>
-
-        <div class="d-grid">
-            <button type="submit" class="btn btn-warning btn-lg">Cadastrar Série</button>
+       
+        <div>
+        <button type="submit" class="btn btn-primary col-12">Cadastrar</button>
         </div>
     </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
