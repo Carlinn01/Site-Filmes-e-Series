@@ -1,74 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>Cadastrar Séries</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastrar Séries</title>
+  <link rel="stylesheet" href="estilo-seriesflix.css" />
 </head>
-<body class="container">
-    <h2 class="text-center">Cadastro de Séries</h2>
-    <form action="cadastro-series.php" class="row" method="POST" enctype="multipart/form-data">
-        <div class="mb-3 col-6">
-            <label for="nome" class="form-label">Titúlo</label>
-            <input type="text" class="form-control" name="titulo" placeholder="Digite o Titúlo da Série">
-        </div>
-        <div class="mb-3 col-6">
-            <label class="form-label">Diretor</label>
-            <input type="text" name="diretor" class="form-control" placeholder="Digite o nome do Diretor">
-        </div>
-        <div class="mb-3 ">
-            <label for="nome" class="form-label">Ano</label>
-            <input type="text" class="form-control" name="ano" placeholder="Digite o Ano de Lançamento">
-        </div>
-        <div class="mb-3">
-            <label for="nome" class="form-label">Elenco</label>
-            <input type="text" class="form-control" name="elenco" placeholder="Digite o Elenco da Série">
-        </div>
-        <div class="mb-3">
-            <label for="nome" class="form-label">Temporadas</label>
-            <input type="text" class="form-control" name="temporadas" placeholder="Digite as Temporadas da Série">
-        </div>
-        <div class="mb-3">
-            <label for="nome" class="form-label">Episodios</label>
-            <input type="text" class="form-control" name="episodios" placeholder="Digite os Episódios da Série">
-        </div>
-         <div class="mb-3 col-6">
-            <label for="idcategoria" class="form-label">Categoria</label>
-            <select name="idcategoria" class="form-select">
-                <?php
-                require_once "src/CategoriaDAO.php";
-                $categoria = CategoriaDAO::listarCategoria();
-                for ($i=0; $i < count($categoria) ; $i++) { 
-                ?>
-                <option value=<?=$categoria[$i]["idcategoria"]?>><?=$categoria[$i]["nome"]?></option>
-                <?php
-                }
-                ?>
-            </select>
-        </div>
-        <div class="mb-3 col-6">
-            <label for="idclassificacao" class="form-label">Classificação</label>
-            <select name="idclassificacao" class="form-select">
-                <?php
-                require_once "src/ClassificacaoDAO.php";
-                $classificacao = ClassificacaoDAO::listarClassificacao();
-                for ($i=0; $i < count($classificacao) ; $i++) { 
-                ?>
-                <option value=<?=$classificacao[$i]["idclassificacao"]?>><?=$classificacao[$i]["nome"]?></option>
-                <?php
-                }
-                ?>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Foto</label>
-            <input type="file" name="imagem" class="form-control">
-        </div>
-       
-        <div>
-        <button type="submit" class="btn btn-primary col-12">Cadastrar</button>
-        </div>
+<body class="bg-dark">
+
+  <main class="container">
+    <h2 class="titulo-filmesflix">Cadastro de Séries</h2>
+
+    <form action="cadastro-series.php" method="POST" enctype="multipart/form-data" class="form-filmesflix">
+
+      <div class="form-group">
+        <label for="titulo" class="label-filmesflix">Título</label>
+        <input type="text" id="titulo" name="titulo" class="input-filmesflix" placeholder="Digite o Título da Série" required />
+      </div>
+
+      <div class="form-group">
+        <label for="diretor" class="label-filmesflix">Diretor</label>
+        <input type="text" id="diretor" name="diretor" class="input-filmesflix" placeholder="Digite o nome do Diretor" required />
+      </div>
+
+      <div class="form-group">
+        <label for="ano" class="label-filmesflix">Ano</label>
+        <input type="text" id="ano" name="ano" class="input-filmesflix" placeholder="Digite o Ano de Lançamento" required />
+      </div>
+
+      <div class="form-group">
+        <label for="elenco" class="label-filmesflix">Elenco</label>
+        <input type="text" id="elenco" name="elenco" class="input-filmesflix" placeholder="Digite o Elenco da Série" />
+      </div>
+
+      <div class="form-group">
+        <label for="temporadas" class="label-filmesflix">Temporadas</label>
+        <input type="text" id="temporadas" name="temporadas" class="input-filmesflix" placeholder="Digite as Temporadas da Série" />
+      </div>
+
+      <div class="form-group">
+        <label for="episodios" class="label-filmesflix">Episódios</label>
+        <input type="text" id="episodios" name="episodios" class="input-filmesflix" placeholder="Digite os Episódios da Série" />
+      </div>
+
+      <div class="form-group">
+        <label for="idcategoria" class="label-filmesflix">Categoria</label>
+        <select id="idcategoria" name="idcategoria" class="select-filmesflix" required>
+          <?php
+          require_once "src/CategoriaDAO.php";
+          $categoria = CategoriaDAO::listarCategoria();
+          foreach ($categoria as $cat) {
+            echo "<option value='{$cat['idcategoria']}'>{$cat['nome']}</option>";
+          }
+          ?>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="idclassificacao" class="label-filmesflix">Classificação</label>
+        <select id="idclassificacao" name="idclassificacao" class="select-filmesflix" required>
+          <?php
+          require_once "src/ClassificacaoDAO.php";
+          $classificacao = ClassificacaoDAO::listarClassificacao();
+          foreach ($classificacao as $class) {
+            echo "<option value='{$class['idclassificacao']}'>{$class['nome']}</option>";
+          }
+          ?>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="imagem" class="label-filmesflix">Foto</label>
+        <input type="file" id="imagem" name="imagem" class="input-filmesflix" />
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn-filmesflix">Cadastrar</button>
+      </div>
+
     </form>
+  </main>
+
 </body>
 </html>
