@@ -8,6 +8,19 @@
 </head>
 <body class="bg-dark">
 
+  <header>
+    <div class="container">
+      <a class="TituloNav" href="index.php">
+      <h1 class="TituloNav">FilmesFlix</h1>
+      </a>
+      <nav>
+        <a href="index.php">Início</a>
+        <a href="filmes.php">Filmes</a>
+        <a href="series.php">Séries</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
     <h2 class="titulo-filmesflix">Cadastro de Séries</h2>
 
@@ -80,6 +93,13 @@
 
     </form>
   </main>
+
+    <footer>
+    <div class="container">
+      <p class="mb-1">© 2025 FilmesFlix.</p>
+      <small>Desenvolvido por Carlos e Silvio</small>
+    </div>
+  </footer>
 
 </body>
 </html>
