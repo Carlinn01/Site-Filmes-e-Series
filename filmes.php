@@ -1,3 +1,6 @@
+<?php
+require_once "src/FilmesDAO.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,13 +27,24 @@
     </header>
     <main>
         <section class="filtro-generos">
+            <?php
+       $filmes_comedia   = FilmesDAO::listarCategoria(1);
+        $filmes_drama     = FilmesDAO::listarCategoria(2);
+        $filmes_acao      = FilmesDAO::listarCategoria(3);
+        $filmes_aventura  = FilmesDAO::listarCategoria(4);
+        $filmes_romance   = FilmesDAO::listarCategoria(5);
+        $filmes_terror    = FilmesDAO::listarCategoria(6);
+
+        ?>
             <ul class="d-flex gap-4" style=" list-style-type: none">
                 <li><a class="nav-link" href="#acao">Ação</a></li>
-                <li><a class="nav-link" href="#fantasia">Fantasia</a></li>
+                <li><a class="nav-link" href="#drama">Drama</a></li>
                 <li><a class="nav-link" href="#terror">Terror</a></li>
                 <li><a class="nav-link" href="#comedia">Comédia</a></li>
-                <li><a class="nav-link" href="#suspense">Suspense</a></li>
+                <li><a class="nav-link" href="#romance">romance</a></li>
             </ul>
+
+        
         </section>
         
         <section class="destaques-section" id="acao">
@@ -40,13 +54,13 @@
                 <div class="carousel">
                     <?php for ($i = 0; $i < count($filmes_acao); $i++) { ?>
                         <div class="card">
-                            <img src="<?= $filmes_acao[$i]['imagem'] ?>" alt="<?= $filmes_acao[$i]['titulo'] ?>" />
+                            <img src="uploads/<?= $filmes_acao[$i]['imagem'] ?>" alt="<?= $filmes_acao[$i]['titulo'] ?>" />
                             <h3><?= $filmes_acao[$i]['titulo'] ?></h3>
-                            <h6 class="sub">Atores: <?= $filmes_acao[$i]['atores'] ?>
+                            <h6 class="sub">elenco: <?= $filmes_acao[$i]['elenco'] ?>
                                 <br><br>
                                 Diretor: <?= $filmes_acao[$i]['diretor'] ?>
                                 <br><br>
-                                Classificação: <?= $filmes_acao[$i]['classificacao'] ?>
+                                Classificação: <?= $filmes_acao[$i]['idclassificacao'] ?>
                             </h6>
                         </div>
                     <?php } ?>
@@ -55,20 +69,20 @@
             </div>
         </section>
 
-        <section class="destaques-section" id="fantasia">
-            <h3>Gênero: Fantasia</h3>
+        <section class="destaques-section" id="drama">
+            <h3>Gênero: drama</h3>
             <div class="carousel-container">
                 <button class="prev-btn">&#10094;</button>
                 <div class="carousel">
-                    <?php for ($i = 0; $i < count($filmes_fantasia); $i++) { ?>
+                    <?php for ($i = 0; $i < count($filmes_drama); $i++) { ?>
                         <div class="card">
-                            <img src="<?= $filmes_fantasia[$i]['imagem'] ?>" alt="<?= $filmes_fantasia[$i]['titulo'] ?>" />
-                            <h3><?= $filmes_fantasia[$i]['titulo'] ?></h3>
-                            <h6 class="sub">Atores: <?= $filmes_fantasia[$i]['atores'] ?>
+                            <img src="uploads/<?= $filmes_drama[$i]['imagem'] ?>" alt="<?= $filmes_drama[$i]['titulo'] ?>" />
+                            <h3><?= $filmes_drama[$i]['titulo'] ?></h3>
+                            <h6 class="sub">elenco: <?= $filmes_drama[$i]['elenco'] ?>
                                 <br><br>
-                                Diretor: <?= $filmes_fantasia[$i]['diretor'] ?>
+                                Diretor: <?= $filmes_drama[$i]['diretor'] ?>
                                 <br><br>
-                                Classificação: <?= $filmes_fantasia[$i]['classificacao'] ?>
+                                Classificação: <?= $filmes_drama[$i]['idclassificacao'] ?>
                             </h6>
                         </div>
                     <?php } ?>
@@ -84,13 +98,13 @@
                 <div class="carousel">
                     <?php for ($i = 0; $i < count($filmes_terror); $i++) { ?>
                         <div class="card">
-                            <img src="<?= $filmes_terror[$i]['imagem'] ?>" alt="<?= $filmes_terror[$i]['titulo'] ?>" />
+                            <img src="uploads/<?= $filmes_terror[$i]['imagem'] ?>" alt="<?= $filmes_terror[$i]['titulo'] ?>" />
                             <h3><?= $filmes_terror[$i]['titulo'] ?></h3>
-                            <h6 class="sub">Atores: <?= $filmes_terror[$i]['atores'] ?>
+                            <h6 class="sub">elenco: <?= $filmes_terror[$i]['elenco'] ?>
                                 <br><br>
                                 Diretor: <?= $filmes_terror[$i]['diretor'] ?>
                                 <br><br>
-                                Classificação: <?= $filmes_terror[$i]['classificacao'] ?>
+                                Classificação: <?= $filmes_terror[$i]['idclassificacao'] ?>
                             </h6>
                         </div>
                     <?php } ?>
@@ -106,13 +120,13 @@
                 <div class="carousel">
                     <?php for ($i = 0; $i < count($filmes_comedia); $i++) { ?>
                         <div class="card">
-                            <img src="<?= $filmes_comedia[$i]['imagem'] ?>" alt="<?= $filmes_comedia[$i]['titulo'] ?>" />
+                            <img src="uploads/<?= $filmes_comedia[$i]['imagem'] ?>" alt="<?= $filmes_comedia[$i]['titulo'] ?>" />
                             <h3><?= $filmes_comedia[$i]['titulo'] ?></h3>
-                            <h6 class="sub">Atores: <?= $filmes_comedia[$i]['atores'] ?>
+                            <h6 class="sub">elenco: <?= $filmes_comedia[$i]['elenco'] ?>
                                 <br><br>
                                 Diretor: <?= $filmes_comedia[$i]['diretor'] ?>
                                 <br><br>
-                                Classificação: <?= $filmes_comedia[$i]['classificacao'] ?>
+                                Classificação: <?= $filmes_comedia[$i]['idclassificacao'] ?>
                             </h6>
                         </div>
                     <?php } ?>
@@ -121,20 +135,20 @@
             </div>
         </section>
 
-        <section class="destaques-section" id="suspense">
-            <h3>Gênero: Suspense</h3>
+        <section class="destaques-section" id="romance">
+            <h3>Gênero: romance</h3>
             <div class="carousel-container">
                 <button class="prev-btn">&#10094;</button>
                 <div class="carousel">
-                    <?php for ($i = 0; $i < count($filmes_suspense); $i++) { ?>
+                    <?php for ($i = 0; $i < count($filmes_romance); $i++) { ?>
                         <div class="card">
-                            <img src="<?= $filmes_suspense[$i]['imagem'] ?>" alt="<?= $filmes_suspense[$i]['titulo'] ?>" />
-                            <h3><?= $filmes_suspense[$i]['titulo'] ?></h3>
-                            <h6 class="sub">Atores: <?= $filmes_suspense[$i]['atores'] ?>
+                            <img src="uploads/<?= $filmes_romance[$i]['imagem'] ?>" alt="<?= $filmes_romance[$i]['titulo'] ?>" />
+                            <h3><?= $filmes_romance[$i]['titulo'] ?></h3>
+                            <h6 class="sub">elenco: <?= $filmes_romance[$i]['elenco'] ?>
                                 <br><br>
-                                Diretor: <?= $filmes_suspense[$i]['diretor'] ?>
+                                Diretor: <?= $filmes_romance[$i]['diretor'] ?>
                                 <br><br>
-                                Classificação: <?= $filmes_suspense[$i]['classificacao'] ?>
+                                Classificação: <?= $filmes_romance[$i]['idclassificacao'] ?>
                             </h6>
                         </div>
                     <?php } ?>
@@ -143,12 +157,12 @@
             </div>
         </section>
 
-        <section>
+        <!-- <section>
             <h2>Filmes Vencedores do Oscar de Melhor Filme</h2>
             <div class="cards-container">
                 <?php for ($i = 0; $i < count($oscar_vencedores); $i++) { ?>
                     <div class="card-lancamento">
-                        <img src="<?= $oscar_vencedores[$i]['imagem'] ?>" alt="<?= $oscar_vencedores[$i]['titulo'] ?>" />
+                        <img src="uploads/<?= $oscar_vencedores[$i]['imagem'] ?>" alt="<?= $oscar_vencedores[$i]['titulo'] ?>" />
                         <h3><?= $oscar_vencedores[$i]['titulo'] ?></h3>
                         <p><?= $oscar_vencedores[$i]['descricao'] ?></p>
                         <?php if (isset($oscar_vencedores[$i]['data_cerimonia'])) { ?>
@@ -158,7 +172,7 @@
                     </div>
                 <?php } ?>
             </div>
-        </section>
+        </section> -->
     </main>
     
     <footer>

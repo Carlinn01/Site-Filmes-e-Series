@@ -63,7 +63,7 @@
           require_once "src/CategoriaDAO.php";
           $categoria = CategoriaDAO::listarCategoria();
           foreach ($categoria as $cat) {
-            echo "<option value='{$cat['idcategoria']}'>{$cat['nome']}</option>";
+            echo "<option value='{$cat['idcategoria']}'>{$cat['nomecategoria']}</option>";
           }
           ?>
         </select>
@@ -76,7 +76,7 @@
           require_once "src/ClassificacaoDAO.php";
           $classificacao = ClassificacaoDAO::listarClassificacao();
           foreach ($classificacao as $class) {
-            echo "<option value='{$class['idclassificacao']}'>{$class['nome']}</option>";
+            echo "<option value='{$class['idclassificacao']}'>{$class['nomeclassificacao']}</option>";
           }
           ?>
         </select>
