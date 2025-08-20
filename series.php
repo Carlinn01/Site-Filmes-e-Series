@@ -20,9 +20,7 @@ require_once "src/SeriesDAO.php";
     <div class="page-title">Séries</div>  <!-- Título central grande -->
     <nav>
       <a href="/filmes.php">Filmes</a>
-      <a href="#drama">Drama</a>
-      <a href="#ficção-científica">Ficção Científica</a>
-      <a href="#comédia">Comédia</a>
+      <a href="/index.php">Home</a>
     </nav>
   </div>
 </header>
