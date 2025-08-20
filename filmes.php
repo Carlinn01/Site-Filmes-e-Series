@@ -18,19 +18,19 @@ require_once "src/FilmesDAO.php";
             </a>
             <div class="page-title">Filmes</div>
             <nav>
-                <a href="filmess.php">Séries</a>
+                <a href="series.php">Séries</a>
             </nav>
         </div>
     </header>
     <main>
 
         <?php
-        $filmes_acao   = FilmesDAO::listarCategoria(1);
-        $filmes_drama     = FilmesDAO::listarCategoria(2);
-        $filmes_terror     = FilmesDAO::listarCategoria(3);
-        $filmes_comedia = FilmesDAO::listarCategoria(4);
-        $filmes_romance   = FilmesDAO::listarCategoria(5);
-        $filmes_aventura   = FilmesDAO::listarCategoria(6);
+$filmes_comedia   = FilmesDAO::listarCategoria(1);
+$filmes_drama     = FilmesDAO::listarCategoria(2);
+$filmes_acao      = FilmesDAO::listarCategoria(3);
+$filmes_aventura  = FilmesDAO::listarCategoria(4);
+$filmes_romance   = FilmesDAO::listarCategoria(5);
+$filmes_terror    = FilmesDAO::listarCategoria(6);
 
         ?>
 
@@ -152,32 +152,15 @@ require_once "src/FilmesDAO.php";
                             <p><strong>Ano:</strong> <?= $filmes_aventura[$i]["ano"] ?></p>
                             <p><strong>Elenco:</strong> <?= $filmes_aventura[$i]['elenco'] ?></p>
                             <p><strong>Diretor:</strong> <?= $filmes_aventura[$i]['diretor'] ?></p>
-                            <p><strong>Classificação:</strong> <?= $filmes_aventura[$i]['idclassificacao'] ?></p>
+                            <p><strong>Classificação:</strong> <?= $filmes_aventura[$i]['nomeclassificacao'] ?></p>
                         </div>
                     <?php } ?>
                 </div>
                 <button class="next-btn">&#10095;</button>
             </div>
         </section>
-
-
-        <!-- <section>
-            <h2>Filmes Vencedores do Oscar de Melhor Filme</h2>
-            <div class="cards-container">
-                <?php for ($i = 0; $i < count($oscar_vencedores); $i++) { ?>
-                    <div class="card-lancamento">
-                        <img src="uploads/<?= $oscar_vencedores[$i]['imagem'] ?>" alt="<?= $oscar_vencedores[$i]['titulo'] ?>" />
-                        <h3><?= $oscar_vencedores[$i]['titulo'] ?></h3>
-                        <p><?= $oscar_vencedores[$i]['descricao'] ?></p>
-                        <?php if (isset($oscar_vencedores[$i]['data_cerimonia'])) { ?>
-                            <p><?= $oscar_vencedores[$i]['data_cerimonia'] ?></p>
-                        <?php } ?>
-                        <p><?= $oscar_vencedores[$i]['sinopse'] ?></p>
-                    </div>
-                <?php } ?>
-            </div>
-        </section> -->
     </main>
+    
 
     <footer>
         <div class="footer-container">

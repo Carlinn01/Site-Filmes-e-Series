@@ -28,7 +28,7 @@ require_once "src/SeriesDAO.php";
 
   <!-- Drama -->
   <section id="drama">
-    <?php $serie_drama = SeriesDAO::listarCategoria(1); ?>
+  <?php $serie_drama = SeriesDAO::listarCategoria(2); ?>
     <h2>Séries de Drama</h2>
     <div class="cards-container">
       <?php for ($i = 0; $i < count($serie_drama); $i++) { ?>
@@ -41,6 +41,7 @@ require_once "src/SeriesDAO.php";
           <p><strong>Temporadas:</strong> <?= $serie_drama[$i]["temporadas"] ?></p>
           <p><strong>Episódios:</strong> <?= $serie_drama[$i]["episodios"] ?></p>
           <p><strong>Classificação:</strong> <?= $serie_drama[$i]['nomeclassificacao'] ?></p>
+          <p><strong>Categoria:</strong> <?= $serie_drama[$i]['idcategoria'] ?></p>
         </div>
       <?php } ?>
     </div>
@@ -48,7 +49,7 @@ require_once "src/SeriesDAO.php";
 
   <!-- Ação -->
   <section id="acao">
-    <?php $serie_acao = SeriesDAO::listarCategoria(2); ?>
+  <?php $serie_acao = SeriesDAO::listarCategoria(3); ?>
     <h2>Séries de Ação</h2>
     <div class="cards-container">
       <?php for ($i = 0; $i < count($serie_acao); $i++) { ?>
@@ -61,6 +62,7 @@ require_once "src/SeriesDAO.php";
           <p><strong>Temporadas:</strong> <?= $serie_acao[$i]["temporadas"] ?></p>
           <p><strong>Episódios:</strong> <?= $serie_acao[$i]["episodios"] ?></p>
           <p><strong>Classificação:</strong> <?= $serie_acao[$i]['nomeclassificacao'] ?></p>
+          <p><strong>Categoria:</strong> <?= $serie_acao[$i]['idcategoria'] ?></p>
         </div>
       <?php } ?>
     </div>
@@ -68,7 +70,7 @@ require_once "src/SeriesDAO.php";
 
   <!-- Comédia -->
   <section id="comedia">
-    <?php $serie_comedia = SeriesDAO::listarCategoria(3); ?>
+  <?php $serie_comedia = SeriesDAO::listarCategoria(1); ?>
     <h2>Séries de Comédia</h2>
     <div class="cards-container">
       <?php for ($i = 0; $i < count($serie_comedia); $i++) { ?>
@@ -81,6 +83,7 @@ require_once "src/SeriesDAO.php";
           <p><strong>Temporadas:</strong> <?= $serie_comedia[$i]["temporadas"] ?></p>
           <p><strong>Episódios:</strong> <?= $serie_comedia[$i]["episodios"] ?></p>
           <p><strong>Classificação:</strong> <?= $serie_comedia[$i]['nomeclassificacao'] ?></p>
+          <p><strong>Categoria:</strong> <?= $serie_comedia[$i]['idcategoria'] ?></p>
         </div>
       <?php } ?>
     </div>
@@ -88,7 +91,7 @@ require_once "src/SeriesDAO.php";
 
   <!-- Aventura -->
   <section id="aventura">
-    <?php $serie_aventura = SeriesDAO::listarCategoria(4); ?>
+  <?php $serie_aventura = SeriesDAO::listarCategoria(4); ?>
     <h2>Séries de Aventura</h2>
     <div class="cards-container">
       <?php for ($i = 0; $i < count($serie_aventura); $i++) { ?>
@@ -108,7 +111,7 @@ require_once "src/SeriesDAO.php";
 
   <!-- Romance -->
   <section id="romance">
-    <?php $serie_romance = SeriesDAO::listarCategoria(5); ?>
+  <?php $serie_romance = SeriesDAO::listarCategoria(5); ?>
     <h2>Séries de Romance</h2>
     <div class="cards-container">
       <?php for ($i = 0; $i < count($serie_romance); $i++) { ?>
