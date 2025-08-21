@@ -324,7 +324,7 @@ require_once "src/SeriesDAO.php";
 </section>
 
 <footer>
-  <div class="footer-container">
+  <div class="container footer-container">
     <h2>FilmesFlix</h2>
     <p class="footer-copy">© 2025 FilmesFlix. Todos os direitos reservados.</p>
   </div>
