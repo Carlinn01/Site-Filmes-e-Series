@@ -1,6 +1,6 @@
 <?php
 require_once "ConexaoBD.php";
-require "src/Util.php";
+require_once "Util.php";
 
 class FilmesDAO
 {
