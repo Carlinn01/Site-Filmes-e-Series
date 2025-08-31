@@ -120,7 +120,6 @@ section h2::before {
   border-radius: 8px;
   flex-shrink: 0;
   width: 220px;
-  height: 400px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -139,8 +138,7 @@ section h2::before {
   padding: 10px;
   color: #fff;
   font-size: 14px;
-  height: 40%;
-  overflow: hidden; /* remove scroll interno */
+  /* altura removida para exibir todo conteúdo */
 }
 
 .card-info h3 {
@@ -156,8 +154,9 @@ section h2::before {
 
 .card:hover {
   transform: scale(1.05);
-  z-index: 5; /* sobe acima dos vizinhos */
+  z-index: 5;
 }
+
 
 /* Botões do carrossel */
 .prev-btn,
@@ -190,21 +189,34 @@ section h2::before {
   right: 20px;
   background-color: #f1333d;
   color: white;
-  padding: 6px 10px;
+  padding: 12px 14px;
   border-radius: 50%;
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 1000;
   text-align: center;
+  text-decoration: none;
   line-height: 1;
+  animation: bounce 1.5s infinite; /* animação infinita */
+}
+
+/* Efeito hover */
+#back-to-top:hover {
+  background-color: #b00712;
+  transform: scale(1.15);
   text-decoration: none;
 }
 
-#back-to-top:hover {
-  background-color: #b00712;
-  text-decoration: none;
+/* Animação "pulando" */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* Footer */
