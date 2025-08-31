@@ -11,6 +11,10 @@ body {
   background-color: #121212;
   color: #fff;
   line-height: 1.6;
+    margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal */
+  min-height: 100vh;  /* garante que o footer fique no fim da tela */
   display: flex;
   flex-direction: column;
 }
@@ -195,10 +199,12 @@ section h2::before {
   z-index: 1000;
   text-align: center;
   line-height: 1;
+  text-decoration: none;
 }
 
 #back-to-top:hover {
   background-color: #b00712;
+  text-decoration: none;
 }
 
 /* Footer */
@@ -206,15 +212,20 @@ footer {
   width: 100%;
   background-color: #1f1f1f;
   color: #fff;
-  padding: 15px 20px;
+  padding: 15px 0;
   border-top: 2px solid #e50914;
-  margin-top: auto;
 }
 
 .footer-container {
+  width: 100%;
+  max-width: 1200px;  /* mantém limite do conteúdo */
+  margin: 0 auto;     /* centraliza horizontalmente */
+  padding: 0 20px;    /* deixa alinhado com a navbar */
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* garante que padding não quebre largura */
 }
 
 .footer-copy {
@@ -222,7 +233,6 @@ footer {
   color: #aaa;
   margin-top: 10px;
 }
-
 /* FORM Cadastro */
 .form-filme {
   max-width: 600px;

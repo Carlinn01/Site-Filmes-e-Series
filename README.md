@@ -62,3 +62,12 @@ Criar um site HTML/PHP de indicação de filmes e séries.
 ## Contribuições:
 Sinta-se à vontade para fazer contribuições para melhorar este projeto!
 
+---
+## Deixar como admin no banco:
+
+UPDATE usuarios
+
+SET tipo = 'admin'
+
+WHERE email = 'usuario@example.com';
+

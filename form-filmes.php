@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["usuario_id"]) || $_SESSION["usuario_tipo"] !== 'admin') {
+    echo "<h2>Acesso negado!</h2>";
+    echo "<p>Você não tem permissão para acessar esta página.</p>";
+    echo "<p><a href='index.php'>Voltar para a página inicial</a></p>";
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

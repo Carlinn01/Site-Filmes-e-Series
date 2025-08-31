@@ -1,4 +1,5 @@
 <?php
+session_start(); // inicia a sessão
 require_once "src/FilmesDAO.php";
 require_once "src/SeriesDAO.php";
 ?>
@@ -11,6 +12,7 @@ require_once "src/SeriesDAO.php";
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header id="top">
@@ -19,6 +21,16 @@ require_once "src/SeriesDAO.php";
     <nav>
       <a href="filmes.php">Filmes</a>
       <a href="series.php">Séries</a>
+<?php if (isset($_SESSION["usuario_id"])): ?>
+    <!-- Usuário logado -->
+    <?php if (isset($_SESSION["usuario_tipo"]) && $_SESSION["usuario_tipo"] === 'admin'): ?>
+        <a href="form-filmes.php">Cadastrar Filme</a>
+        <a href="form-series.php">Cadastrar Série</a>
+    <?php endif; ?>
+    <a href="logout.php">Sair</a>
+<?php else: ?>
+    <a href="login.php">Login</a>
+<?php endif; ?>
     </nav>
   </div>
 </header>
@@ -324,13 +336,13 @@ require_once "src/SeriesDAO.php";
 </section>
 
 <footer>
-  <div class="container footer-container">
+  <div class="footer-container">
     <h2>FilmesFlix</h2>
     <p class="footer-copy">© 2025 FilmesFlix. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<a href="#top" id="back-to-top" title="Voltar ao topo">&#8679;</a>
+<a href="#top" id="back-to-top" title="Voltar ao topo">&#9757;</a>
 
 <script>
   document.querySelectorAll('.cards-carousel-container').forEach(carousel => {
@@ -364,4 +376,5 @@ require_once "src/SeriesDAO.php";
 
 
 </body>
+
 </html>

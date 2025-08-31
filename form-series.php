@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Verifica se o usuário está logado e é admin
+if (!isset($_SESSION["usuario_id"]) || $_SESSION["usuario_tipo"] !== 'admin') {
+    // Redireciona para a página inicial ou login
+    header("Location: index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
