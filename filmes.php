@@ -1,27 +1,61 @@
 <?php
+session_start();
 require_once "src/FilmesDAO.php";
+
+// Pega usuário logado, se existir
+$usuario = null;
+if (isset($_SESSION['usuario_id'])) {
+    $usuario = [
+        'id'   => $_SESSION['usuario_id'],
+        'nome' => $_SESSION['usuario_nome'],
+        'tipo' => $_SESSION['usuario_tipo']
+    ];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>FilmesFlix</title>
     <link rel="stylesheet" href="filmes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <a href="/index.php" class="TituloNav">
-                <h1>FilmesFlix</h1>
-            </a>
-            <div class="page-title">Filmes</div>
-            <nav>
-                <a href="series.php">Séries</a>
-            </nav>
+<header>
+    <div class="container">
+        <a href="index.php" class="TituloNav">
+            <h1>FilmesFlix</h1>
+        </a>
+
+        <div class="page-title">Filmes</div>
+
+        <nav>
+            <a href="series.php">Séries</a>
+
+            <?php if (isset($_SESSION["usuario_id"])): ?>
+        <div class="dropdown">
+            <?php
+            $nomes = explode(" ", $_SESSION["usuario_nome"]);
+            $nome_exibicao = $nomes[0] . (isset($nomes[1]) ? " " . $nomes[1] : "");
+            ?>
+            <button class="dropbtn">
+                <?= htmlspecialchars($nome_exibicao) ?> (<?= htmlspecialchars($_SESSION["usuario_tipo"]) ?>) &#9662;
+            </button>
+            <div class="dropdown-content">
+                <?php if ($_SESSION["usuario_tipo"] === 'admin'): ?>
+                    <a href="form-filmes.php">Cadastrar Filme</a>
+                    <a href="form-series.php">Cadastrar Série</a>
+                <?php endif; ?>
+                <a href="logout.php">Sair</a>
+            </div>
         </div>
-    </header>
+    <?php else: ?>
+        <a href="login.php" class="login-link">Entrar</a>
+    <?php endif; ?>
+        </nav>
+    </div>
+</header>
+
     <main>
 
         <?php

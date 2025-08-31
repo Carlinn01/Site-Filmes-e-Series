@@ -38,18 +38,30 @@ $classificacoes_imagens = [
   <div class="container">
     <a href="/index.php" class="TituloNav"><h1>FilmesFlix</h1></a>
     <nav>
-      <a href="filmes.php">Filmes</a>
-      <a href="series.php">Séries</a>
-      <?php if (isset($_SESSION["usuario_id"])): ?>
+  <a href="filmes.php">Filmes</a>
+  <a href="series.php">Séries</a>
+
+  <?php if (isset($_SESSION["usuario_id"])): ?>
+    <div class="dropdown">
+      <?php
+$nomes = explode(" ", $_SESSION["usuario_nome"]);
+$nome_exibicao = $nomes[0] . (isset($nomes[1]) ? " " . $nomes[1] : "");
+?>
+<button class="dropbtn">
+  <?= $nome_exibicao ?> (<?= $_SESSION["usuario_tipo"] ?>) &#9662;
+</button>
+      <div class="dropdown-content">
         <?php if ($_SESSION["usuario_tipo"] === 'admin'): ?>
           <a href="form-filmes.php">Cadastrar Filme</a>
           <a href="form-series.php">Cadastrar Série</a>
         <?php endif; ?>
         <a href="logout.php">Sair</a>
-      <?php else: ?>
-        <a href="login.php">Login</a>
-      <?php endif; ?>
-    </nav>
+      </div>
+    </div>
+  <?php else: ?>
+    <a href="login.php">Login</a>
+  <?php endif; ?>
+</nav>
   </div>
 </header>
 
@@ -72,7 +84,6 @@ $classificacoes_imagens = [
                 <p><strong>Elenco:</strong> <?= $filme["elenco"] ?></p>
                 <p><strong>Prêmios:</strong> <?= $filme["premios"] ?></p>
                 <p>
-  <strong>Classificação:</strong> <?= $filme["nomeclassificacao"] ?>
   <img src="<?= $classificacoes_imagens[$filme['idclassificacao']] ?>" alt="<?= $filme["nomeclassificacao"] ?>" style="width:30px;height:30px;margin-left:5px;">
 </p>
               </div>
@@ -102,7 +113,6 @@ $classificacoes_imagens = [
             <p><strong>Temporadas:</strong> <?= $serie["temporadas"] ?></p>
             <p><strong>Episódios:</strong> <?= $serie["episodios"] ?></p>
             <p>
-              <strong>Classificação:</strong> <?= $serie["nomeclassificacao"] ?>
               <img src="<?= $classificacoes_imagens[$serie['idclassificacao']] ?>" 
                    alt="<?= $serie["nomeclassificacao"] ?>" 
                    style="width:30px;height:30px;margin-left:5px;">

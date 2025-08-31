@@ -1,13 +1,54 @@
 <?php
 session_start();
 
-// Verifica se o usuário está logado e é admin
+// Bloqueia acesso se não for admin
 if (!isset($_SESSION["usuario_id"]) || $_SESSION["usuario_tipo"] !== 'admin') {
-    // Redireciona para a página inicial ou login
-    header("Location: index.php");
+    ?>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <title>Acesso Negado</title>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'Bebas Neue', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          text-align: center;
+        }
+        .acesso-negado a {
+          color: #fff;
+          background-color: #e50914;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 15px;
+          transition: background-color 0.3s;
+        }
+        .acesso-negado a:hover {
+          background-color: #ff1c1c;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="acesso-negado">
+        <h2>Acesso negado!</h2>
+        <p>Você não tem permissão para acessar esta página.</p>
+        <a href="index.php">Voltar para a página inicial</a>
+      </div>
+    </body>
+    </html>
+    <?php
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
