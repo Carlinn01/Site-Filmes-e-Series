@@ -73,11 +73,13 @@ WHERE email = 'usuario@example.com';
 
 ## Criar a tabela usuario:
 
-CREATE TABLE usuarios (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    senha VARCHAR(255) NOT NULL,
-    isAdmin BOOLEAN DEFAULT FALSE
+CREATE TABLE public.usuarios (
+    id integer NOT NULL,
+    nome text NOT NULL,
+    email text NOT NULL,
+    senha text NOT NULL,
+    tipo text DEFAULT 'usuario'::text
 );
+
+
 
