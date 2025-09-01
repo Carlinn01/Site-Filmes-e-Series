@@ -71,3 +71,13 @@ SET tipo = 'admin'
 
 WHERE email = 'usuario@example.com';
 
+## Criar a tabela usuario:
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    isAdmin BOOLEAN DEFAULT FALSE
+);
+
