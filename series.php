@@ -35,7 +35,7 @@ $classificacoes_imagens = [
     <div class="container">
         <a href="index.php" class="TituloNav"><h1>FilmesFlix</h1></a>
         <nav>
-            <a href="index.php">Home</a>
+          <div class="page-title">Séries</div>
             <a href="filmes.php">Filmes</a>
 
             <?php if (isset($_SESSION["usuario_id"])): ?>
