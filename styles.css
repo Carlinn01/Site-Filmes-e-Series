@@ -11,10 +11,10 @@ body {
   background-color: #121212;
   color: #fff;
   line-height: 1.6;
-    margin: 0;
+  margin: 0;
   padding: 0;
   overflow-x: hidden; /* evita scroll horizontal */
-  min-height: 100vh;  /* garante que o footer fique no fim da tela */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 }

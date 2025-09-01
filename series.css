@@ -1,4 +1,6 @@
-/* Reset básico/base */
+/* =========================
+   RESET E BASE
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,73 +12,132 @@ body {
   background-color: #121212;
   color: #fff;
   line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* =========================
+   DROPDOWN USUÁRIO
+========================= */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.dropbtn {
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.dropbtn:hover {
+  background-color: #e50914;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  z-index: 100;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #e50914;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
 header {
   background-color: #1f1f1f;
-  padding: 20px;
+  padding: 10px 20px;
   border-bottom: 2px solid #e50914;
 }
 
 .container {
-  font-family: Bebas Neue;
-  width: 90%;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-}
-
-.page-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 28px;
-  font-weight: bold;
-  color: #e50914; /* vermelho Netflix */
-  pointer-events: none; /* para o título não interferir nos cliques */
 }
 
 .TituloNav {
+  font-size: 28px;
   color: #e50914;
   text-decoration: none;
 }
 
-
 nav a {
-  margin-left: 20px;
   color: #fff;
   text-decoration: none;
+  margin-left: 15px;
+  font-size: 30px;
+  transition: color 0.3s ease;
   font-weight: bold;
-  font-family: Arial, sans-serif;
 }
 
 nav a:hover {
   color: #e50914;
 }
 
+/* =========================
+   MAIN
+========================= */
 main {
+  flex: 1;
   width: 90%;
-  margin: 30px auto;
-  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: #e50914;
+  text-align: center;
+  margin: 30px 0;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 section h2 {
-  font-size: 26px;
+  font-size: 32px;
   color: #e50914;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #e50914;
+  padding-left: 10px;
   position: relative;
-  padding-left: 15px;
-  font-family: Arial, sans-serif;
 }
 
-/* Barrinha vermelha ao lado do título */
 section h2::before {
   content: "";
   position: absolute;
@@ -89,91 +150,150 @@ section h2::before {
   border-radius: 2px;
 }
 
+/* =========================
+   CARROSSEL DE CARDS
+========================= */
+.cards-carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
 .cards-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px 0;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
 }
 
-/* Card estilizado */
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
 .card {
-  background-color: #1f1f1f;
-  border-radius: 10px;
-  overflow: hidden;
+  background-color: #222;
+  border-radius: 8px;
+  flex-shrink: 0;
   width: 220px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
   transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
 }
 
 .card img {
   width: 100%;
-  height: 330px;
+  height: 60%;
   object-fit: cover;
-  display: block;
+  border-radius: 8px 8px 0 0;
 }
 
-.card-body {
-  padding: 15px;
-}
-
-.card-title {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-}
-
-.card-body p {
+.card-info {
+  padding: 10px;
+  color: #fff;
   font-size: 14px;
-  color: #ccc;
-  margin-bottom: 6px;
-  font-family: Arial, sans-serif;
 }
 
-/* Rodapé */
-footer {
-  background-color: #1f1f1f;
-  text-align: center;
-  padding: 20px 0;
-  border-top: 2px solid #333;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-container h2 {
+.card-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
   color: #e50914;
-  margin-bottom: 10px;
+}
+
+.card-info p {
+  margin: 2px 0;
+  color: #ccc;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+/* Botões do carrossel */
+.prev-btn,
+.next-btn {
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  width: 100%;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 15px 0;
+  border-top: 2px solid #e50914;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-copy {
   font-size: 14px;
   color: #aaa;
+  margin-top: 10px;
 }
 
-/* Botão voltar ao topo */
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
 #back-to-top {
   position: fixed;
-  bottom: 20px; 
-  right: 20px;  
+  bottom: 20px;
+  right: 20px;
   background-color: #f1333d;
   color: white;
-  padding: 6px 10px; 
+  padding: 12px 14px;
   border-radius: 50%;
-  font-size: 28px;  
+  font-size: 26px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 1000;
   text-align: center;
   line-height: 1;
+  animation: bounce 1.5s infinite;
 }
-
 
 #back-to-top:hover {
   background-color: #b00712;
+  transform: scale(1.15);
 }
 
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
