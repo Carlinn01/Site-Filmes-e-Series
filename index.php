@@ -67,7 +67,7 @@ $nome_exibicao = $nomes[0] . (isset($nomes[1]) ? " " . $nomes[1] : "");
 
 <main>
 
-  <h1>Filmes</h1>
+  <h1 class='titulo'>Filmes</h1>
   <?php foreach ($categorias as $id => $nome): ?>
     <section id="filme-<?= strtolower($nome) ?>">
       <h2>Filmes de <?= $nome ?></h2>
@@ -95,7 +95,7 @@ $nome_exibicao = $nomes[0] . (isset($nomes[1]) ? " " . $nomes[1] : "");
     </section>
   <?php endforeach; ?>
 
-  <h1>Séries</h1>
+  <h1 class='titulo'>Séries</h1>
 <?php foreach ($categorias as $id => $nome): ?>
 <section id="serie-<?= strtolower($nome) ?>">
   <h2>Séries de <?= $nome ?></h2>

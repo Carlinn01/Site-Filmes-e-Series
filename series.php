@@ -84,7 +84,7 @@ $classificacoes_imagens = [
                                 <p>
                                     <img src="<?= $classificacoes_imagens[$serie['idclassificacao']] ?>" 
                                          alt="<?= $serie["nomeclassificacao"] ?>" 
-                                         style="width:30px;height:30px;margin-left:5px;">
+                                         style="width:30px;height:30px;margin-left:5px;"> 
                                 </p>
                             </div>
                         </div>
@@ -103,7 +103,6 @@ $classificacoes_imagens = [
     </div>
 </footer>
 
-<a href="#top" id="back-to-top" title="Voltar ao topo">&#11014;</a>
 
 <script>
 document.querySelectorAll('.cards-carousel-container').forEach(carousel => {
