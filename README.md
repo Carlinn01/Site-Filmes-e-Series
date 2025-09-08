@@ -73,3 +73,15 @@ SET tipo = 'admin'
 
 WHERE email = 'usuario@example.com';
 
+## Criar a tabela usuario:
+
+CREATE TABLE public.usuarios (
+    id integer NOT NULL,
+    nome text NOT NULL,
+    email text NOT NULL,
+    senha text NOT NULL,
+    tipo text DEFAULT 'usuario'::text
+);
+
+
+
