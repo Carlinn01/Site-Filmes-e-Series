@@ -6,6 +6,8 @@ Sites de filmes e séries
 ## Objetivo:
 Criar um site HTML/PHP de indicação de filmes e séries.
 
+Criar Form de cadastro para filmes e séries
+
 ---
 
 ## Estrutura do Site:
