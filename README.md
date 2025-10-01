@@ -14,20 +14,13 @@ Criar Form de cadastro para filmes e séries
 
 ### 1. **Topo:**
 - **Título do site**: FilmesFlix.
-- **Menus**: 
+- **Menus**:
+    - Página Inicial com Filmes e Séries Cadastrados     
     - Página de **Séries**
     - Página de **Filmes**
-
 ---
 
-### 2. **Página Principal:**
-- **Destaques**: Exibição de indicações do site em formato de carrossel.
-- **Lançamentos**: Exibir os 5 últimos filmes lançados.
-- **Filmes que ganharam Oscar**: Exibir filmes premiados com o Oscar.
-
----
-
-### 3. **Página de Filmes:**
+### 2. **Página de Filmes:**
 - **Exibir todos os filmes**, organizados por **gênero**.
 - **Dados exibidos**:
     - Título
